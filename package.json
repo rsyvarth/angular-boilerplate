@@ -1,7 +1,7 @@
 {
   "name": "angular-boilerplate",
   "version": "0.0.1",
-  "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Casper",
+  "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Mocha",
   "main": "src/index.html",
   "dependencies": {
   },

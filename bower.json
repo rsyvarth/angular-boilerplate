@@ -5,7 +5,7 @@
   "authors": [
     "Robert Syvarth <robert@syvarth.com>"
   ],
-  "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Casper",
+  "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Mocha",
   "main": "src/index.html",
   "license": "MIT",
   "private": false,

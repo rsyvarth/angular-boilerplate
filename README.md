@@ -1,5 +1,5 @@
 # angular-boilerplate
-Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Casper
+Opinionated boilerplate for an Angular app with predefined component structure, Gulp, Sass, Karma, and Mocha/Chai
 
 ## Getting Started
 Install Node.js then complete the following steps
