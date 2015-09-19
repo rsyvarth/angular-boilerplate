@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     ngAnnotate = require('gulp-ng-annotate'),
     sass = require('gulp-sass'),
+    karma = require('karma').Server,
     connect = require('gulp-connect');
 
 gulp.task('help', function(){
@@ -15,7 +16,7 @@ gulp.task('help', function(){
     gutil.log('Tasks:');
     gutil.log('\t build \t\t Builds the app into the dist directory');
     gutil.log('\t connect \t Serves the production app from the dist directory');
-    // gutil.log('\t test \t\t Run all tests');
+    gutil.log('\t test \t\t Run all tests');
     gutil.log('\t default \t Run a local dev environment');
     gutil.log('\t help \t\t Prints out this command');
 });
@@ -93,5 +94,16 @@ gulp.task('watch', ['build'], function () {
     gulp.watch(['bower_components/**/*.js'], ['vendor']);
     gulp.watch(['src/index.html'], ['buildIndex']);
 });
- 
+
+gulp.task('test', ['build'], function (cb) {
+    new karma({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, function(status) {
+        //Big bad hack
+        process.exit(status);
+        // cb(status ? "Karma tests did not pass" : undefined);
+    }).start();
+});
+
 gulp.task('default', ['build', 'connect', 'watch']);
