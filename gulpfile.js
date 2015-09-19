@@ -106,4 +106,15 @@ gulp.task('test', ['build'], function (cb) {
     }).start();
 });
 
+gulp.task('tdd', ['build'], function (cb) {
+    new karma({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: false
+    }, function(status) {
+        //Big bad hack
+        // process.exit(status);
+        cb(status ? "Karma tests did not pass" : undefined);
+    }).start();
+});
+
 gulp.task('default', ['build', 'connect', 'watch']);

@@ -14,7 +14,7 @@ var ExampleModel = Class.extend({
     },
 
     load: function() {
-        this.exampleService.callApi().then(function(data){
+        return this.exampleService.callApi().then(function(data){
             this.data = data;
             this.events.notify(models.events.EXAMPLE_LOADED);
         }.bind(this));

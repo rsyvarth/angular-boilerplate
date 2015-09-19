@@ -17,9 +17,10 @@ module.exports = function(config) {
     files: [
       'dist/vendor.js',
       'dist/app.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'tests/karma/karmaHelpers.js',
       'tests/karma/**/*.js'
     ],
-
 
     // list of files to exclude
     exclude: [
