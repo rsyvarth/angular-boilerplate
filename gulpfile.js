@@ -20,12 +20,18 @@ gulp.task('help', function(){
     gutil.log('\t help \t\t Prints out this command');
 });
 
-gulp.task('build', ['html', 'css', 'js', 'vendor', 'buildIndex']);
+gulp.task('build', ['html', 'images', 'css', 'js', 'vendor', 'buildIndex']);
 
 gulp.task('html', function () {
     gulp.src('src/partials/**/*.html')
         .pipe(connect.reload())
         .pipe(gulp.dest('dist/partials'));
+});
+
+gulp.task('images', function () {
+    gulp.src('src/images/**/*')
+        .pipe(connect.reload())
+        .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('css', function () {
@@ -81,6 +87,7 @@ gulp.task('connect', ['build'], function() {
 gulp.task('watch', ['build'], function () {
     gulp.watch(['src/partials/**/*.html'], ['html']);
     gulp.watch(['src/css/**/*.scss'], ['css']);
+    gulp.watch(['src/images/**/*'], ['images']);
     gulp.watch(['src/**/*.js'], ['js']);
     gulp.watch(['bower_components/**/*.js'], ['vendor']);
     gulp.watch(['src/index.html'], ['buildIndex']);

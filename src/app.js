@@ -10,3 +10,8 @@ var app = angular.module('boilerplate', [
     'ui.router',
     'pascalprecht.translate'
 ]);
+
+
+app.config(function ($locationProvider) {
+    $locationProvider.html5Mode(true);
+});
