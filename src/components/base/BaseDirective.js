@@ -2,7 +2,7 @@
 
 var BaseDirective = Class.extend({
     $scope: null,
-    Events: null,
+    events: null,
 
     init: function($scope, Events){
         //These errors are just informational, they won't stop execution
@@ -10,7 +10,7 @@ var BaseDirective = Class.extend({
         if(!Events) { console.error("BaseDirective::init() - Missing required argument Events"); }
 
         this.$scope = $scope;
-        this.Events = Events;
+        this.events = Events;
 
         this.addListeners();
         this.setupScope();

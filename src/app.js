@@ -4,8 +4,8 @@ var app = angular.module('boilerplate', [
     'events',
 
     'example',
-    // 'example.exampleModel',
-    // 'example.exampleService',
+    'example.exampleModel',
+    'example.exampleService',
 
     'ui.router',
     'pascalprecht.translate'
