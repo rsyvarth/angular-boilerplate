@@ -15,3 +15,11 @@ var app = angular.module('boilerplate', [
 app.config(function ($locationProvider) {
     $locationProvider.html5Mode(true);
 });
+
+app.config(['$translateProvider', function ($translateProvider) {
+  // add translation table
+  $translateProvider
+    .translations('en', translations) //translations is set in lang/en/lang.js
+    .preferredLanguage('en')
+    .useSanitizeValueStrategy('escape');
+}]);

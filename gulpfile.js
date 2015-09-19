@@ -47,6 +47,7 @@ gulp.task('js', function () {
             'src/components/base/Events.js',
             'src/components/base/BaseDirective.js',
             'src/components/base/*',
+            'src/lang/en/lang.js', //Include our lang strings
             'src/**/*.*js'])
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
