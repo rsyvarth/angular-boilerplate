@@ -4,11 +4,10 @@
   "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Casper",
   "main": "src/index.html",
   "dependencies": {
-    "karma": "~0.13.9",
-    "gulp": "~3.9.0",
-    "gulp-util": "~3.0.6"
   },
   "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-util": "~3.0.6",
     "gulp-connect": "~2.2.0",
     "gulp-concat": "~2.6.0",
     "gulp-sourcemaps": "~1.5.2",
@@ -23,8 +22,7 @@
     "karma-chai": "~0.1.0"
   },
   "scripts": {
-    "test": "gulp test",
-    "preinstall": "npm i -g gulp bower"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",

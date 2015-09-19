@@ -8,7 +8,6 @@
   "description": "Opinionated boilerplate Angular app with predefined component structure, Gulp, Sass, Karma, and Casper",
   "main": "src/index.html",
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
