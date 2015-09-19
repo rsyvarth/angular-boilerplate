@@ -4,8 +4,9 @@ Opinionated boilerplate Angular app with predefined component structure, Gulp, S
 ## Getting Started
 Install Node.js then complete the following steps
 ```
+git clone https://github.com/rsyvarth/angular-boilerplate.git
+cd angular-boilerplate
 sudo npm install -g gulp bower
-bower install rsy-angular-boilerplate
 npm install
 bower install
 gulp
